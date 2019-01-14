@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  cachet:
+    build:
+      context: .
+      args:
+        - cachet_ver=v2.3.15
+    image: dstw/cachet:1
+    container_name: cachet
+    ports:
+      - 8000:8000
+    environment:
+      - DB_DRIVER=mysql
+      - DB_HOST=localhost
+      - DB_PORT=3306
+      - DB_DATABASE=cachet
+      - DB_USERNAME=cachet
+      - DB_PASSWORD=
+      - DB_PREFIX=chq_
+      - APP_LOG=errorlog
+      - DEBUG=false
+    restart: on-failure
