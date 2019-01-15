@@ -20,4 +20,6 @@ services:
       - DB_PREFIX=chq_
       - APP_LOG=errorlog
       - DEBUG=false
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
     restart: on-failure
