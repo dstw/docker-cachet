@@ -15,12 +15,14 @@ To install docker in Ubuntu 18.04 use the commands:
 
 ## Installation
 
-Edit file docker-compose.yml environment. This docker use external database.
-Also edit file [cachet_monitor.yml][3]. Then:
+Edit file docker-compose.yml environment.  
+This app use external database, make sure it exist.  
+Rename cachet_monitor.example.yml to cachet_monitor.yml and edit it.  
+After all, fire up:
 
     $ docker-compose up -d
 
-You can visit your site default on: http://{your-ip}:8000
+You can visit your site, default on: http://{your-ip}:8000
 
 ## Built-in plugin
 
@@ -28,9 +30,7 @@ Include [CastawayLabs/cachet-monitor][3] to auto update system status.
 
 ## More Info
 
-Based on [CachetHQ/Docker][2]
-
-Modified by: Didik Setiawan
+Forked from [CachetHQ/Docker][2]
 
 [1]:https://www.docker.com
 [2]:https://github.com/CachetHQ/Docker

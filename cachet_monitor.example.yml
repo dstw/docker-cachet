@@ -1,0 +1,15 @@
+api:
+  url: http://yoursite/api/v1
+  token: yourtoken
+  insecure: false
+date_format: 02/01/2006 15:04:05 UTC
+monitors:
+  - name: yourtargetsite
+    target: https://yourtargetsite.com
+    strict: true
+    method: POST
+    component_id: 1
+    interval: 10
+    timeout: 10
+    threshold: 50
+    expected_status_code: 200
